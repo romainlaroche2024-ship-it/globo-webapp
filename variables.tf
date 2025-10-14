@@ -3,7 +3,7 @@ variable "region" {
   type        = string
   description = "(Optional) AWS Region to deploy in. Defaults to us-east-1."
   ###default     = "us-east-1"
-  default     = "eu-west-3" ### maj locale
+  default = "eu-west-3" ### maj locale
 }
 
 variable "prefix" {
