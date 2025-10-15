@@ -26,6 +26,7 @@ resource "aws_security_group" "webapp_http_inbound_sg" {
   tags = local.common_tags
 }
 
+/* maj module 9
 resource "aws_security_group" "webapp_ssh_inbound_sg" {
   name        = "${local.name_prefix}-ssh-inbound"
   description = "Allow SSH from certain ranges"
@@ -42,6 +43,7 @@ resource "aws_security_group" "webapp_ssh_inbound_sg" {
 
   tags = local.common_tags
 }
+*/
 
 resource "aws_security_group" "webapp_outbound_sg" {
   name        = "${local.name_prefix}-webapp-outbound"
