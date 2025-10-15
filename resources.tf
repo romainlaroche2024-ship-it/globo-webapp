@@ -44,6 +44,7 @@ resource "aws_instance" "main" {
     "Name" = "${local.name_prefix}-webapp-${count.index}"
   })
 
+  /* maj module 8
   # Provisioner Stuff
   connection {
     type        = "ssh"
@@ -66,6 +67,9 @@ resource "aws_instance" "main" {
     on_failure = continue
   }
 
+*/
+  user_data_replace_on_change = true
+  user_data                   = templatefile("templates/userdata.sh", { playbook_repository = var.playbook_repository })
 }
 
 resource "null_resource" "webapp" {
