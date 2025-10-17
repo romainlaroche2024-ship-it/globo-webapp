@@ -6,6 +6,8 @@ output "webapp_instance0_public_ip" {
   value = aws_instance.main[0].public_ip
 }
 
+/* maj module 9
 output "private_key_pem" {
   value = nonsensitive(module.ssh_keys.private_key_pem)
 }
+*/
