@@ -46,7 +46,7 @@ resource "aws_instance" "main" {
     aws_security_group.webapp_outbound_sg.id,
   ]
 
-  key_name = module.ssh_keys.key_pair_name
+  ###key_name = module.ssh_keys.key_pair_name maj module 9
 
   tags = merge(local.common_tags, {
     "Name" = "${local.name_prefix}-webapp-${count.index}"
